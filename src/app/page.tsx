@@ -33,7 +33,7 @@ export default function Home() {
     setLoading(true);
     try {
       const predictionResponse = await axios.get(
-        `http://127.0.0.1:8000/predict?ticker=${ticker}`
+        `https://trading-backend-python-production.up.railway.app/predict?ticker=${ticker}`
       );
       setPredictionData(predictionResponse.data);
       console.log("API Response Data:", predictionResponse.data);
